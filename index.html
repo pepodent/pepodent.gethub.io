@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pepodent Portfolio</title>
+
+  <!-- WAJIB UNTUK HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      display: flex;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    /* DARK MODE */
+    .dark {
+      background: #0a0a0a;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .profile {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+    }
+
+    p {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    .section {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .section h3 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 10px 0;
+      padding: 12px 15px;
+
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    /* COLORS */
+    .ig { background: #E1306C; }
+    .tt { background: #000; }
+    .gh { background: #333; }
+    .yt { background: #FF0000; }
+    .fb { background: #1877F2; }
+
+    /* SKILL BAR */
+    .skill {
+      margin: 8px 0;
+    }
+
+    .bar {
+      height: 8px;
+      background: #334155;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      background: #38bdf8;
+    }
+
+    /* PROJECT */
+    .project {
+      background: rgba(255,255,255,0.05);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 480px) {
+      .container {
+        padding: 12px;
+      }
+
+      .profile {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    /* BUTTON DARK */
+    .toggle {
+      margin-top: 1px;
+      padding: 1px;
+      border: none;
+      border-radius: 1px;
+      cursor: pointer;
+      background-color: transparent;
+      color: black;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <!-- DARK MODE -->
+      <button class="toggle" onclick="toggleDark()">🌙</button>
+
+      <!-- PROFILE -->
+      <img class="profile" src="foto.jpg">
+
+      <h1>pepodent</h1>
+      <p>Ingin Jadi Programmer Tapi Enggan Ngoding</p>
+      <p style="color:#38bdf8;">Open for Freelance / Collaboration</p>
+
+      <!-- SOCIAL -->
+      <div class="section">
+        <h3>Social Media</h3>
+
+        <a class="btn ig" href=https://instagram.com/afiifuddiin>
+          <div class="left">
+            <img class="icon" src="ig.png"> afiifuddiin
+          </div> ➜
+        </a>
+        
+        <a class="btn fb" href=https://facebook.com/afiifuddiin>
+          <div class="left">
+            <img class="icon" src="fb.png"> M Peppodent
+          </div> ➜
+        </a>
+        
+        <a class="btn gh" href=https://github.com/pepodent>
+          <div class="left">
+            <img class="icon" src="gh.png"> pepodent
+          </div> ➜
+        </a>
+
+        <a class="btn tt" href=https://tiktok.com/404-notfound>
+          <div class="left">
+            <img class="icon" src="tt.png"> TikTok
+          </div> ➜
+        </a>
+    
+        <a class="btn yt" href=http://youtube.com/pepodent>
+          <div class="left">
+            <img class="icon" src="yt.png"> YouTube
+          </div> ➜
+        </a>   
+      </div>
+
+      <!-- SKILLS -->
+      <div class="section">
+        <h3>Skills</h3>
+
+        <div class="skill">HTML
+          <div class="bar"><div class="fill" style="width:3%"></div></div>
+        </div>
+
+        <div class="skill">CSS
+          <div class="bar"><div class="fill" style="width:3%"></div></div>
+        </div>
+
+        <div class="skill">JavaScript
+          <div class="bar"><div class="fill" style="width:3%"></div></div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <h3>Projects</h3>
+
+        <div class="project">🌐 Personal Portfolio Website</div>
+        <div class="project">🎮 Games Player</div>
+        <div class="project">📱 Social Link Page</div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="section">
+        <h3>Contact</h3>
+
+        <a class="btn ig" href="mailto:youremail@gmail.com">
+          <div class="left">
+            <img class="icon" src="email.jpg"> Email</div> ➜
+        </a>
+
+        <a class="btn fb" href="https://wa.me/62xxxxxxxx">
+          <div class="left">
+            <img class="icon" src="wa.jpg"> WhatsApp</div> ➜
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
